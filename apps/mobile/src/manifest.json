@@ -1,0 +1,12 @@
+{
+  "name": "BrickEnterprise Mobile",
+  "appid": "",
+  "description": "移动端：待办审批 + 通知（design.md §1.1）",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "h5": {
+    "darkmode": false
+  },
+  "vueVersion": "3"
+}

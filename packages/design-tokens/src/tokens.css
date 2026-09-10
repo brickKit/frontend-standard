@@ -1,0 +1,83 @@
+/**
+ * 运行时可写的 CSS 变量（决策 114）。不是编译进 bundle 的 TS 常量——
+ * 亮/暗、紧凑/常规都要能在运行时切换，不重新构建。
+ *
+ * 切换方式：在 <html> 上设置 data-theme="light|dark" 与
+ * data-density="comfortable|compact"（见 src/index.ts 的 applyTheme/
+ * applyDensity）。两端（AntDV / wot-design-uni）各自的组件库 token
+ * 由 ui-kit-pc / ui-kit-mobile 派生自这里的语义 token，不重复定义。
+ */
+
+:root {
+  /* ---- 语义色：浅色（默认） ---- */
+  --be-color-bg: #f5f6f8;
+  --be-color-surface: #ffffff;
+  --be-color-surface-raised: #ffffff;
+  --be-color-border: #e2e4e9;
+  --be-color-text-primary: #1a1d24;
+  --be-color-text-secondary: #5c6270;
+  --be-color-text-disabled: #a1a6b3;
+
+  --be-color-brand: #2563eb;
+  --be-color-brand-hover: #1d4ed8;
+  --be-color-success: #16a34a;
+  --be-color-warning: #d97706;
+  --be-color-danger: #dc2626;
+  --be-color-info: #2563eb;
+
+  /* ---- 间距：常规密度（默认） ---- */
+  --be-space-xs: 4px;
+  --be-space-sm: 8px;
+  --be-space-md: 16px;
+  --be-space-lg: 24px;
+  --be-space-xl: 32px;
+
+  --be-row-height: 44px;
+  --be-control-height: 36px;
+
+  /* ---- 圆角 / 阴影 / 字号（不随主题/密度变化） ---- */
+  --be-radius-sm: 4px;
+  --be-radius-md: 8px;
+  --be-shadow-card: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.1);
+
+  --be-font-size-sm: 12px;
+  --be-font-size-md: 14px;
+  --be-font-size-lg: 16px;
+}
+
+/* ---- 暗色：只重定义颜色 token ---- */
+:root[data-theme="dark"] {
+  --be-color-bg: #101318;
+  --be-color-surface: #181c23;
+  --be-color-surface-raised: #20252d;
+  --be-color-border: #2c313b;
+  --be-color-text-primary: #eef0f3;
+  --be-color-text-secondary: #9aa1af;
+  --be-color-text-disabled: #5c6270;
+
+  --be-color-brand: #3b82f6;
+  --be-color-brand-hover: #60a5fa;
+  --be-color-success: #22c55e;
+  --be-color-warning: #f59e0b;
+  --be-color-danger: #ef4444;
+  --be-color-info: #3b82f6;
+
+  --be-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ---- 紧凑密度：只重定义间距/行高 token ---- */
+:root[data-density="compact"] {
+  --be-space-xs: 2px;
+  --be-space-sm: 4px;
+  --be-space-md: 8px;
+  --be-space-lg: 16px;
+  --be-space-xl: 24px;
+
+  --be-row-height: 32px;
+  --be-control-height: 28px;
+}
+
+body {
+  background: var(--be-color-bg);
+  color: var(--be-color-text-primary);
+}

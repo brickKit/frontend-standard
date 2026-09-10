@@ -1,0 +1,33 @@
+{
+  "name": "@be/ui-kit-pc",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@be/design-tokens": "workspace:*",
+    "ant-design-vue": "4.2.6",
+    "vxe-table": "4.21.9",
+    "vxe-pc-ui": "4.18.9",
+    "@ant-design/icons-vue": "7.0.1",
+    "dayjs": "1.11.23",
+    "vue": "3.5.42"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "2.5.0",
+    "@vitejs/plugin-vue": "6.0.8",
+    "typescript": "5.9.3",
+    "vue-tsc": "3.3.11",
+    "vite": "8.2.2",
+    "vitest": "3.2.7",
+    "jsdom": "27.0.0"
+  }
+}

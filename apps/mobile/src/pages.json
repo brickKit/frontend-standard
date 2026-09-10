@@ -1,0 +1,30 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^wd-(.*)": "wot-design-uni/components/wd-$1/wd-$1.vue"
+    }
+  },
+  "pages": [
+    { "path": "pages/login/index", "type": "home", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/callback/index", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/tasks/list", "style": { "navigationBarTitleText": "我的待办" } },
+    { "path": "pages/tasks/detail", "style": { "navigationBarTitleText": "待办详情" } },
+    { "path": "pages/notifications/list", "style": { "navigationBarTitleText": "通知中心" } }
+  ],
+  "tabBar": {
+    "color": "#5c6270",
+    "selectedColor": "#2563eb",
+    "backgroundColor": "#ffffff",
+    "list": [
+      { "pagePath": "pages/tasks/list", "text": "待办" },
+      { "pagePath": "pages/notifications/list", "text": "通知" }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "BrickEnterprise",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#f5f6f8"
+  }
+}

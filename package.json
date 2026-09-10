@@ -1,0 +1,20 @@
+{
+  "name": "frontend-standard",
+  "private": true,
+  "version": "1.0.0",
+  "engines": { "node": ">=20" },
+  "packageManager": "pnpm@12.3.4",
+  "scripts": {
+    "dev": "pnpm --filter @be/app-pc dev",
+    "dev:mobile": "pnpm --filter @be/app-mobile dev:h5",
+    "build": "pnpm --filter @be/design-tokens build && pnpm --filter @be/app-pc build",
+    "typecheck": "pnpm -r --if-present run typecheck",
+    "lint": "pnpm -r --if-present run lint",
+    "test": "pnpm -r --if-present run test",
+    "contract-check": "tsx scripts/checkPageTemplates.ts"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "tsx": "4.23.13"
+  }
+}

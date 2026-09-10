@@ -1,0 +1,17 @@
+/**
+ * §12.6.2 同款一次性接线活的移动端版本：把 wot-design-uni 的 CSS 变量
+ * 派生自 `@be/design-tokens` 的 `--be-*`，主题只有一处真相源。跟 PC 端
+ * 的 `theme.ts` 不同——这里不需要 JS 调用（wot-design-uni 没有 vxe 那种
+ * "必须调 setTheme() 才能翻转 data-* 属性"的机制，纯粹靠 CSS 变量级联），
+ * 一份静态 CSS 就够，随 `@be/design-tokens/tokens.css` 之后引入即可。
+ *
+ * 变量名逐字核对自 `wot-design-uni@1.14.0` 包内
+ * `components/common/abstracts/variable.scss`，不是猜的。
+ */
+:root {
+  --wot-color-theme: var(--be-color-brand);
+  --wot-color-success: var(--be-color-success);
+  --wot-color-warning: var(--be-color-warning);
+  --wot-color-danger: var(--be-color-danger);
+  --wot-color-info: var(--be-color-info);
+}

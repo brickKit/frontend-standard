@@ -2,7 +2,7 @@
   "name": "frontend-standard",
   "private": true,
   "version": "1.0.0",
-  "engines": { "node": ">=20" },
+  "engines": { "node": ">=24" },
   "packageManager": "pnpm@12.3.4",
   "scripts": {
     "dev": "pnpm --filter @be/app-pc dev",

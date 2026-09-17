@@ -3,7 +3,7 @@
 # H5 合用同一个 Nginx 容器：PC 在 `/`，移动端在 `/m/`（apps/mobile 的
 # vite.config.ts 已把 base 设成 `/m/`，见其注释）。
 
-FROM node:20-slim AS builder
+FROM node:24-slim AS builder
 WORKDIR /workspace
 RUN corepack enable && corepack prepare pnpm@12.3.4 --activate
 
